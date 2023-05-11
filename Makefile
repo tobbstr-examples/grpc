@@ -8,3 +8,6 @@ proto_image:
 # Run go generate in docker.
 gen: proto_image
 	 docker run --rm -w /wd/in -v $(CURDIR):/wd/in $(IMAGE) go generate ./...
+
+run:
+	go run cmd/server/server.go
